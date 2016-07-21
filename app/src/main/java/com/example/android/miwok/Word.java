@@ -7,39 +7,39 @@ public class Word {
 
 
     // State variables
-    private String miwok_translation;
-    private String default_translation;
+    private String mMiwokTranslation;
+    private String mDefaultTranslation;
 
     // Constructor
-    public  Word (String miwok, String default_t ) {
+    public  Word (String miwokTranslation, String defaultTranslation ) {
 
-        setMiwok_translation(miwok);
-        setDefault_translation(default_t);
+        setMiwokTranslation(miwokTranslation);
+        setDefaultTranslation(defaultTranslation);
 
     }
 
     // Setter methods
-    public void setMiwok_translation(String miwok){
+    public void setMiwokTranslation(String miwokTranslation){
 
-        miwok_translation = miwok;
+        mMiwokTranslation = miwokTranslation;
 
     }
 
-    public void setDefault_translation(String default_t){
+    public void setDefaultTranslation(String defaultTranslation){
 
-        default_translation = default_t;
+        mDefaultTranslation = defaultTranslation;
     }
 
     // Getter method
 
-    public String getMiwok_translation(){
+    public String getmMiwokTranslation(){
 
-        return miwok_translation;
+        return mMiwokTranslation;
     }
 
-    public String getDefault_translation() {
+    public String getmDefaultTranslation() {
 
-        return default_translation;
+        return mDefaultTranslation;
     }
 
 }
