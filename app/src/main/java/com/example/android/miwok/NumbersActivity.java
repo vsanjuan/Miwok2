@@ -56,10 +56,11 @@ public class NumbersActivity extends AppCompatActivity {
 
         // Method to save memory by reusing the view
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, words);
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
+        assert listView != null;
         listView.setAdapter(itemsAdapter);
 
 
