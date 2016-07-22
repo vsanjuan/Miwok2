@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/list_item">
+    android:id="@+id/activity_list_item">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:id="@+id/miwok"/>
+        android:layout_marginLeft="16dp"
+        android:id="@+id/miwok_tex_view"
+        tools:text="lutti"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/english"/>
+        android:layout_marginLeft="16dp"
+        android:id="@+id/default_text_view"
+        tools:text="one"/>
 
 </LinearLayout>
