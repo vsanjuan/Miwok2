@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -45,6 +46,12 @@ public class WordAdapter extends ArrayAdapter<Word>{
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
         numberTextView.setText(currentWord.getmDefaultTranslation());
+
+        // Find the ImageView in the list_item.xml laoyout with the ID version_number
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.word_image);
+        // Get version imgae from the current Word object and
+        // set this image on the image ImageView
+        imageView.setImageResource(currentWord.getmImageResourceId());
 
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)

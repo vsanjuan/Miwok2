@@ -42,16 +42,16 @@ public class NumbersActivity extends AppCompatActivity {
         //TODO: Add words here
         ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("one","lutti"));
-        words.add(new Word("two","otiiko"));
-        words.add(new Word("three","tolooksu"));
-        words.add(new Word("four","oyyisa"));
-        words.add(new Word("five","mossoka"));
-        words.add(new Word("six","temmoka"));
-        words.add(new Word("seven","kenekaku"));
-        words.add(new Word("eight","kawinta"));
-        words.add(new Word("nine","wo'e"));
-        words.add(new Word("ten","na'aacha"));
+        words.add(new Word("one","lutti",R.mipmap.number_one));
+        words.add(new Word("two","otiiko",R.mipmap.number_two));
+        words.add(new Word("three","tolooksu",R.mipmap.number_three));
+        words.add(new Word("four","oyyisa",R.mipmap.number_four));
+        words.add(new Word("five","mossoka",R.mipmap.number_five));
+        words.add(new Word("six","temmoka",R.mipmap.number_six));
+        words.add(new Word("seven","kenekaku",R.mipmap.number_seven));
+        words.add(new Word("eight","kawinta",R.mipmap.number_eight));
+        words.add(new Word("nine","wo'e",R.mipmap.number_nine));
+        words.add(new Word("ten","na'aacha",R.mipmap.number_ten));
 
         /*
         Method to save memory by reusing the view

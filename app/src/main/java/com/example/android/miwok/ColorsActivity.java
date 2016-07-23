@@ -31,14 +31,14 @@ public class ColorsActivity extends AppCompatActivity {
         //TODO: Add words here
         ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("red","wetetti"));
-        words.add(new Word("green","chokokki"));
-        words.add(new Word("brown","takaakki"));
-        words.add(new Word("gray","topoppi"));
-        words.add(new Word("black","kululli"));
-        words.add(new Word("white","kelelli"));
-        words.add(new Word("dusty yellow","topiisa"));
-        words.add(new Word("mustard yellow","chiwiita"));
+        words.add(new Word("red","wetetti",R.mipmap.color_red));
+        words.add(new Word("green","chokokki",R.mipmap.color_green));
+        words.add(new Word("brown","takaakki",R.mipmap.color_brown));
+        words.add(new Word("gray","topoppi",R.mipmap.color_gray));
+        words.add(new Word("black","kululli",R.mipmap.color_black));
+        words.add(new Word("white","kelelli",R.mipmap.color_white));
+        words.add(new Word("dusty yellow","topiisa",R.mipmap.color_dusty_yellow));
+        words.add(new Word("mustard yellow","chiwiita",R.mipmap.color_mustard_yellow));
 
         /*
         Method to save memory by reusing the view

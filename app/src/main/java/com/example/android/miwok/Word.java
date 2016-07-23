@@ -9,14 +9,29 @@ public class Word {
     // State variables
     private String mMiwokTranslation;
     private String mDefaultTranslation;
+    private int mImageResourceId;
+    private boolean mImage;
 
     // Constructor
     public  Word ( String defaultTranslation, String miwokTranslation ) {
 
         setMiwokTranslation(miwokTranslation);
         setDefaultTranslation(defaultTranslation);
+        mImage = false;
 
     }
+
+    // Constructor
+    public  Word ( String defaultTranslation, String miwokTranslation, int imageResourceId ) {
+
+        setMiwokTranslation(miwokTranslation);
+        setDefaultTranslation(defaultTranslation);
+        mImageResourceId = imageResourceId;
+        mImage = true;
+
+    }
+
+
 
     // Setter methods
     public void setMiwokTranslation(String miwokTranslation){
@@ -40,6 +55,12 @@ public class Word {
     public String getmDefaultTranslation() {
 
         return mDefaultTranslation;
+    }
+
+    public int getmImageResourceId() {
+
+        return mImageResourceId;
+
     }
 
 }
