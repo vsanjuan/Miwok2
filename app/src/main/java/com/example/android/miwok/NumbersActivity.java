@@ -41,22 +41,22 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         //TODO: Add words here
-        ArrayList<Word> words = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<>();
 
-        words.add("one","lutti");
-        words.add("two","otiiko");
-        words.add("three","tolooksu");
-        words.add("four","oyyisa");
-        words.add("five","mossoka");
-        words.add("six","temmoka");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
-        words.add("ten");
+        words.add(new Word("one","lutti"));
+        words.add(new Word("two","otiiko"));
+        words.add(new Word("three","tolooksu"));
+        words.add(new Word("four","oyyisa"));
+        words.add(new Word("five","mossoka"));
+        words.add(new Word("six","temmoka"));
+        words.add(new Word("seven","kenekaku"));
+        words.add(new Word("eight","kawinta"));
+        words.add(new Word("nine","wo'e"));
+        words.add(new Word("ten","na'aacha"));
 
         // Method to save memory by reusing the view
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
+        ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
