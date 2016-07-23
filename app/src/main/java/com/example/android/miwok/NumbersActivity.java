@@ -18,7 +18,6 @@ package com.example.android.miwok;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.android.gms.appindexing.Action;
@@ -38,7 +37,7 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
 
         //TODO: Add words here
         ArrayList<Word> words = new ArrayList<>();
@@ -54,14 +53,17 @@ public class NumbersActivity extends AppCompatActivity {
         words.add(new Word("nine","wo'e"));
         words.add(new Word("ten","na'aacha"));
 
-        // Method to save memory by reusing the view
-
+        /*
+        Method to save memory by reusing the view
         ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
+        */
+
+        WordAdapter adapter = new WordAdapter(this,words);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
         assert listView != null;
-        listView.setAdapter(itemsAdapter);
+        listView.setAdapter(adapter);
 
 
 
