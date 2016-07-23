@@ -11,7 +11,7 @@ public class Word {
     private String mDefaultTranslation;
 
     // Constructor
-    public  Word (String miwokTranslation, String defaultTranslation ) {
+    public  Word ( String defaultTranslation, String miwokTranslation ) {
 
         setMiwokTranslation(miwokTranslation);
         setDefaultTranslation(defaultTranslation);

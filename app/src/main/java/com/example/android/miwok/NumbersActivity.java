@@ -41,14 +41,14 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         //TODO: Add words here
-        ArrayList<String> words = new ArrayList<String>();
+        ArrayList<Word> words = new ArrayList<Word>();
 
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
+        words.add("one","lutti");
+        words.add("two","otiiko");
+        words.add("three","tolooksu");
+        words.add("four","oyyisa");
+        words.add("five","mossoka");
+        words.add("six","temmoka");
         words.add("seven");
         words.add("eight");
         words.add("nine");
