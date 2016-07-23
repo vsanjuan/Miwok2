@@ -31,14 +31,15 @@ public class PhrasesActivity extends AppCompatActivity {
         //TODO: Add words here
         ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("red","wetetti"));
-        words.add(new Word("green","chokokki"));
-        words.add(new Word("brown","takaakki"));
-        words.add(new Word("gray","topoppi"));
-        words.add(new Word("black","kululli"));
-        words.add(new Word("white","kelelli"));
-        words.add(new Word("dusty yellow","topiisa"));
-        words.add(new Word("mustard yellow","chiwiita"));
+        words.add(new Word("Where are you going?","minto wuksus"));
+        words.add(new Word("What is your name?","tinna oyaase"));
+        words.add(new Word("My name is...","oyaaset"));
+        words.add(new Word("How are you feeling?","michakses?"));
+        words.add(new Word("I'm feeling good.","kuchi achit"));
+        words.add(new Word("Yes, I'm coming?","hee'eenem"));
+        words.add(new Word("I'm coming.","eenem"));
+        words.add(new Word("Let's go","yoowutis"));
+        words.add(new Word("Come here.","anninem"));
 
         /*
         Method to save memory by reusing the view

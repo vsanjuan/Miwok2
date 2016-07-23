@@ -31,14 +31,17 @@ public class FamilyActivity extends AppCompatActivity {
         //TODO: Add words here
         ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("red","wetetti"));
-        words.add(new Word("green","chokokki"));
-        words.add(new Word("brown","takaakki"));
-        words.add(new Word("gray","topoppi"));
-        words.add(new Word("black","kululli"));
-        words.add(new Word("white","kelelli"));
-        words.add(new Word("dusty yellow","topiisa"));
-        words.add(new Word("mustard yellow","chiwiita"));
+        words.add(new Word("father","apa"));
+        words.add(new Word("mother","ata"));
+        words.add(new Word("son","angsi"));
+        words.add(new Word("daughter","tune"));
+        words.add(new Word("older brother","taachi"));
+        words.add(new Word("younger brother","chalitti"));
+        words.add(new Word("older sister","tete"));
+        words.add(new Word("younger sister","kolliti"));
+        words.add(new Word("grandmother","ama"));
+        words.add(new Word("grandfather","paapa"));
+
 
         /*
         Method to save memory by reusing the view
