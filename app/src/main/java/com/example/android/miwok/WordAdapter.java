@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word>{
 
     private int mBackgroundColor;
+
+    private String TAG = "Word Adapter: ";
 
     public WordAdapter(Activity context, ArrayList<Word> Words, int BackgroundColor ){
 
@@ -40,16 +43,21 @@ public class WordAdapter extends ArrayAdapter<Word>{
         Word currentWord = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.miwok_translation);
+        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_translation);
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView
-        nameTextView.setText(currentWord.getmMiwokTranslation());
+//        miwokTextView.setBackgroundColor(this.mBackgroundColor);
+        miwokTextView.setText(currentWord.getmMiwokTranslation());
+
+   /*     Log.i(TAG, "Background parameter: " + Integer.toString(this.mBackgroundColor));
+        Log.i(TAG, "Background value. " + miwokTextView.getBackground().toString());*/
 
         // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView numberTextView = (TextView) listItemView.findViewById(R.id.default_translation);
+        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_translation);
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
-        numberTextView.setText(currentWord.getmDefaultTranslation());
+        defaultTextView.setText(currentWord.getmDefaultTranslation());
+//        defaultTextView.setBackgroundColor(this.mBackgroundColor);
 
         // Find the ImageView in the list_item.xml laoyout with the ID version_number
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.word_image);
@@ -69,6 +77,13 @@ public class WordAdapter extends ArrayAdapter<Word>{
 
 
         }
+
+        //Set the theme color for the list item
+        View textContainer = listItemView.findViewById(R.id.text_container);
+        //Find the color that the resource ID maps to
+        int color = ContextCompat.getColor((getContext()),mBackgroundColor);
+        // Set teh background color of the text container View
+        textContainer.setBackgroundColor(color);
 
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)

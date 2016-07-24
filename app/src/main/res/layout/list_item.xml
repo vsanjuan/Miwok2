@@ -11,33 +11,44 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/list_item_height"
+            android:layout_height="@dimen/image_item_width"
             android:src="@mipmap/ic_launcher"
             android:id="@+id/word_image"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/text_container"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:id="@+id/miwok_translation"
-                android:background="@color/category_numbers"/>
+            <!--android:background="@color/category_numbers"-->
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                style="@style/MiwokText"
+                android:id="@+id/miwok_translation"
+                />
+
+            <!--android:background="@color/category_numbers"-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top"
+                style="@style/ListItem"
                 android:id="@+id/default_translation"/>
+
+            <!--android:background="@color/category_numbers"-->
 
 
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </LinearLayout>
