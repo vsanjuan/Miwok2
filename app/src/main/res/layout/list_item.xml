@@ -25,7 +25,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:id="@+id/miwok_translation"/>
+                android:id="@+id/miwok_translation"
+                android:background="@color/category_numbers"/>
 
             <TextView
                 android:layout_width="match_parent"

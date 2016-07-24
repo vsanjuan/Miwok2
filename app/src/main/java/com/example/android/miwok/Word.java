@@ -63,4 +63,9 @@ public class Word {
 
     }
 
+    public boolean ismImage() {
+
+        return mImage;
+    }
+
 }

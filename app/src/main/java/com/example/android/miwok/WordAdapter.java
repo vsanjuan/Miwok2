@@ -15,9 +15,13 @@ import java.util.ArrayList;
  */
 public class WordAdapter extends ArrayAdapter<Word>{
 
-    public WordAdapter(Activity context, ArrayList<Word> Words){
+    private int mBackgroundColor;
+
+    public WordAdapter(Activity context, ArrayList<Word> Words, int BackgroundColor ){
 
         super(context, 0, Words);
+
+        mBackgroundColor = BackgroundColor;
 
     }
 
@@ -49,9 +53,22 @@ public class WordAdapter extends ArrayAdapter<Word>{
 
         // Find the ImageView in the list_item.xml laoyout with the ID version_number
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.word_image);
-        // Get version imgae from the current Word object and
-        // set this image on the image ImageView
-        imageView.setImageResource(currentWord.getmImageResourceId());
+
+        // Check if there are images associated to the word
+        if (currentWord.ismImage()) {
+
+
+            // Get version image from the current Word object and
+            // set this image on the image ImageView
+            imageView.setImageResource(currentWord.getmImageResourceId());
+
+        } else {
+
+            // Hide the ImageView
+            imageView.setVisibility(View.GONE);
+
+
+        }
 
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)

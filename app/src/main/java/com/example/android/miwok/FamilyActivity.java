@@ -48,9 +48,10 @@ public class FamilyActivity extends AppCompatActivity {
         ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
         */
 
-        WordAdapter adapter = new WordAdapter(this,words);
+        WordAdapter adapter = new WordAdapter(this,words,R.color.category_family);
 
         ListView listView = (ListView) findViewById(R.id.list);
+
 
         assert listView != null;
         listView.setAdapter(adapter);
