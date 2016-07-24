@@ -17,12 +17,44 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class FamilyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_family);
+        setContentView(R.layout.word_list);
+
+        //TODO: Add words here
+        ArrayList<Word> words = new ArrayList<>();
+
+        words.add(new Word("father","apa",R.mipmap.family_father));
+        words.add(new Word("mother","ata",R.mipmap.family_mother));
+        words.add(new Word("son","angsi",R.mipmap.family_son));
+        words.add(new Word("daughter","tune",R.mipmap.family_daughter));
+        words.add(new Word("older brother","taachi",R.mipmap.family_older_brother));
+        words.add(new Word("younger brother","chalitti",R.mipmap.family_younger_brother));
+        words.add(new Word("older sister","tete",R.mipmap.family_older_sister));
+        words.add(new Word("younger sister","kolliti",R.mipmap.family_younger_sister));
+        words.add(new Word("grandmother","ama",R.mipmap.family_grandmother));
+        words.add(new Word("grandfather","paapa",R.mipmap.family_grandfather));
+
+
+        /*
+        Method to save memory by reusing the view
+        ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
+        */
+
+        WordAdapter adapter = new WordAdapter(this,words,R.color.category_family);
+
+        ListView listView = (ListView) findViewById(R.id.list);
+
+
+        assert listView != null;
+        listView.setAdapter(adapter);
+
     }
 }

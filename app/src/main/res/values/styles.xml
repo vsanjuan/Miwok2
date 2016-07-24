@@ -30,4 +30,19 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
+
+    <!-- Style for text list items -->
+    <style name="ListItem">
+        <item name="android:color">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <!-- Style for miwok list item -->
+    <style name="MiwokText">
+        <item name="android:color">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
 </resources>

@@ -18,7 +18,6 @@ package com.example.android.miwok;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.android.gms.appindexing.Action;
@@ -38,30 +37,33 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
 
         //TODO: Add words here
-        ArrayList<Word> words = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("lutti","one"));
-        words.add(new Word("otiiko","two"));
-        words.add(new Word("tolookosu","three"));
-        words.add(new Word("oyyisa","four"));
-        words.add(new Word("massokka","four"));
-        words.add(new Word("temmokka","five"));
-        words.add(new Word("kenekaku","six"));
-        words.add(new Word("kawinta","eight"));
-        words.add(new Word("wo'e","nine"));
-        words.add(new Word("na'aacha","ten"));
+        words.add(new Word("one","lutti",R.mipmap.number_one));
+        words.add(new Word("two","otiiko",R.mipmap.number_two));
+        words.add(new Word("three","tolooksu",R.mipmap.number_three));
+        words.add(new Word("four","oyyisa",R.mipmap.number_four));
+        words.add(new Word("five","mossoka",R.mipmap.number_five));
+        words.add(new Word("six","temmoka",R.mipmap.number_six));
+        words.add(new Word("seven","kenekaku",R.mipmap.number_seven));
+        words.add(new Word("eight","kawinta",R.mipmap.number_eight));
+        words.add(new Word("nine","wo'e",R.mipmap.number_nine));
+        words.add(new Word("ten","na'aacha",R.mipmap.number_ten));
 
+        /*
+        Method to save memory by reusing the view
+        ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
+        */
 
-        // Method to save memory by reusing the view
-
-        ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<Word>(this,android.R.layout.activity_list_item, words);
+        WordAdapter adapter = new WordAdapter(this,words,R.color.category_numbers);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
-        listView.setAdapter(itemsAdapter);
+        assert listView != null;
+        listView.setAdapter(adapter);
 
 
 
