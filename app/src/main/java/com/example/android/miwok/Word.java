@@ -11,22 +11,25 @@ public class Word {
     private String mDefaultTranslation;
     private int mImageResourceId;
     private boolean mImage;
+    private int mSoundResourceId;
 
     // Constructor
-    public  Word ( String defaultTranslation, String miwokTranslation ) {
+    public  Word ( String defaultTranslation, String miwokTranslation, int soundResourceId ) {
 
         setMiwokTranslation(miwokTranslation);
         setDefaultTranslation(defaultTranslation);
         mImage = false;
+        mSoundResourceId = soundResourceId;
 
     }
 
     // Constructor
-    public  Word ( String defaultTranslation, String miwokTranslation, int imageResourceId ) {
+    public  Word ( String defaultTranslation, String miwokTranslation, int imageResourceId, int soundResourceId ) {
 
         setMiwokTranslation(miwokTranslation);
         setDefaultTranslation(defaultTranslation);
         mImageResourceId = imageResourceId;
+        mSoundResourceId = soundResourceId;
         mImage = true;
 
     }
@@ -66,6 +69,11 @@ public class Word {
     public boolean ismImage() {
 
         return mImage;
+    }
+
+    public int getmSoundResourceId(){
+
+        return mSoundResourceId;
     }
 
 }
