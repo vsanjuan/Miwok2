@@ -22,7 +22,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -80,12 +79,11 @@ public class FamilyActivity extends AppCompatActivity {
                 mMediaPlayer = MediaPlayer.create(FamilyActivity.this, words.get(i).getmSoundResourceId());
                 mMediaPlayer.start();
 
-                onItemClick();
 
             }
         });
 
-        if (mMediaPlayer.isPlaying()) {
+/*        if (mMediaPlayer.isPlaying()) {
             Toast toast;
             mMediaPlayer.setOnCompletionListener(
 
@@ -94,7 +92,7 @@ public class FamilyActivity extends AppCompatActivity {
 
 
             );
-        }
+        }*/
 
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
