@@ -8,13 +8,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/word_box">
 
         <ImageView
-            android:layout_width="@dimen/list_item_height"
-            android:layout_height="@dimen/image_item_width"
+            android:layout_width="@dimen/image_item_width"
+            android:layout_height="@dimen/list_item_height"
             android:src="@mipmap/ic_launcher"
             android:id="@+id/word_image"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,6 +46,8 @@
                 android:id="@+id/default_translation"/>
 
             <!--android:background="@color/category_numbers"-->
+
+
 
 
         </LinearLayout>

@@ -86,9 +86,9 @@ public class WordAdapter extends ArrayAdapter<Word>{
         // Set teh background color of the text container View
 //        textContainer.setBackgroundColor(color);
 
-        textContainer.setBackgroundColor(this.mBackgroundColor);
-        Log.i(TAG, "Background parameter: " + Integer.toString(this.mBackgroundColor));
-        Log.i(TAG, "Color value: " + Integer.toString(color));
+        textContainer.setBackgroundColor(color);
+        Log.v(TAG, "Background parameter: " + Integer.toString(this.mBackgroundColor));
+        Log.v(TAG, "Color value: " + Integer.toString(color));
 
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
