@@ -37,13 +37,6 @@ import static com.example.android.miwok.R.color.category_numbers;
 
 public class NumbersActivity extends AppCompatActivity {
 
-    private static Context context;
-    private static Context mContext = getAppContext();
-    private static MediaPlayer mMediaPlayer;
-
-
-    // Create an Audio Manager instance
-    final AudioManager am = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -61,11 +54,15 @@ public class NumbersActivity extends AppCompatActivity {
      */
     private GoogleApiClient client3;
 
-    // Get application context method
-    private static Context getAppContext() {
-        return NumbersActivity.context;
+    public NumbersActivity() {
     }
 
+    // Variables for Audio playing
+
+    private MediaPlayer mMediaPlayer;
+    private AudioManager am;
+
+    // Method to execute when the recording is finished
 
     private MediaPlayer.OnCompletionListener mCompletionListener  = new MediaPlayer.OnCompletionListener() {
 
@@ -74,12 +71,14 @@ public class NumbersActivity extends AppCompatActivity {
             // Now that the sound file has finished playing, release the media player resources.
             releaseMediaPlayer();
             am.abandonAudioFocus(afChangeListener);
-            Toast.makeText(getApplicationContext(), "Hola", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NumbersActivity.this , "Hola", Toast.LENGTH_SHORT).show();
 
         }
 
     };
 
+
+    //Set up of the FocusChange method to handle different scenarios when AudioFocus change
     AudioManager.OnAudioFocusChangeListener afChangeListener =
             new AudioManager.OnAudioFocusChangeListener() {
                 public void onAudioFocusChange(int focusChange) {
@@ -122,11 +121,6 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        // Helper class to obtain the application context
-        NumbersActivity.context = getApplicationContext();
-
-        // Function to manage the different state from the Audio Manager
-
         //TODO: Add words here
         final ArrayList<Word> words = new ArrayList<>();
 
@@ -153,6 +147,9 @@ public class NumbersActivity extends AppCompatActivity {
         assert listView != null;
         listView.setAdapter(adapter);
 
+        // Create Audio Manager variable
+
+        am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         // Play the word
 
@@ -167,7 +164,7 @@ public class NumbersActivity extends AppCompatActivity {
 
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
 
-
+                    // Sets the media play with the appropiate sound
                     mMediaPlayer = MediaPlayer.create(NumbersActivity.this, words.get(i).getmSoundResourceId());
                     mMediaPlayer.start();
                     mMediaPlayer.setOnCompletionListener(mCompletionListener);
@@ -176,16 +173,6 @@ public class NumbersActivity extends AppCompatActivity {
             }
         });
 
-        if (mMediaPlayer != null && mMediaPlayer.isPlaying())
-            mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
-                @Override
-                public void onCompletion(MediaPlayer m) {
-
-                    releaseMediaPlayer();
-                    Toast.makeText(getApplicationContext(), "Hola", Toast.LENGTH_SHORT).show();
-                }
-            });
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.

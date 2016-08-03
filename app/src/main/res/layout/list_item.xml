@@ -48,9 +48,14 @@
             <!--android:background="@color/category_numbers"-->
 
 
-
-
         </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/image_item_width"
+            android:layout_height="@dimen/list_item_height"
+            android:src="@mipmap/play_arrow"
+            android:id="@+id/play_arrow"/>
+
 
     </LinearLayout>
 
