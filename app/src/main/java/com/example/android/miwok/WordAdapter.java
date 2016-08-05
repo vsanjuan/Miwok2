@@ -71,6 +71,7 @@ public class WordAdapter extends ArrayAdapter<Word>{
             // set this image on the image ImageView
             imageView.setImageResource(currentWord.getmImageResourceId());
 
+
         } else {
 
             // Hide the ImageView
@@ -81,12 +82,20 @@ public class WordAdapter extends ArrayAdapter<Word>{
 
         //Set the theme color for the list item
         View textContainer = listItemView.findViewById(R.id.text_container);
+        // View wordBox = listItemView.findViewById(R.id.word_box);
+        View blankView = listItemView.findViewById(R.id.blank_view);
+        View playArrow = listItemView.findViewById(R.id.play_arrow);
         //Find the color that the resource ID maps to
         int color = ContextCompat.getColor((getContext()),mBackgroundColor);
         // Set teh background color of the text container View
-//        textContainer.setBackgroundColor(color);
+//      // textContainer.setBackgroundColor(color);
+        // imageView.setBackgroundColor(color);
 
         textContainer.setBackgroundColor(color);
+        // wordBox.setBackgroundColor(color);
+        blankView.setBackgroundColor(color);
+        playArrow.setBackgroundColor(color);
+
         Log.v(TAG, "Background parameter: " + Integer.toString(this.mBackgroundColor));
         Log.v(TAG, "Color value: " + Integer.toString(color));
 
