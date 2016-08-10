@@ -114,6 +114,8 @@ public class ColorsFragment extends Fragment {
 /*        TextView textView = new TextView(getActivity());
         textView.setText(R.string.hello_blank_fragment);
         return textView;*/
+
+        //Inflates the main view that contains all the child elements
         View rootView = inflater.inflate(R.layout.word_list, container, false);
 
         /** TODO: Insert all the code from the Number's Activity onCreate() method
@@ -137,10 +139,16 @@ public class ColorsFragment extends Fragment {
         ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
         */
 
+
+        // Create an instance from Word Adapter with necessary information
+
         WordAdapter adapter = new WordAdapter(getActivity(), words, category_colors);
 
+
+        // Recupera el objeto que contiene todos los elementos de la lista
         final ListView listView = (ListView) rootView.findViewById(R.id.list);
 
+        // LLama al Adapter
         assert listView != null;
         listView.setAdapter(adapter);
 
