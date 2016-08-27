@@ -1,6 +1,6 @@
 package com.example.android.miwok;
 
-import android.app.Activity;
+import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,7 +21,7 @@ public class WordAdapter extends ArrayAdapter<Word>{
 
     private String TAG = "Word Adapter: ";
 
-    public WordAdapter(Activity context, ArrayList<Word> Words, int BackgroundColor ){
+    public WordAdapter(Context context, ArrayList<Word> Words, int BackgroundColor ){
 
         super(context, 0, Words);
 
